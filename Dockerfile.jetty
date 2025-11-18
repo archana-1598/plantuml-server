@@ -22,6 +22,21 @@ RUN apt-get update && \
         curl \
         fonts-noto-cjk \
         libgd3 \
+        libc6 \
+        libgnutls30 \
+        sqlite3 \
+        perl \
+        tiff \
+        gnupg2 \
+        libcap2-bin \
+        libssh-4 \
+        libpam0g \
+        krb5-user \
+        openssl \
+        libtasn1-6 \
+        systemd \
+        dpkg \
+        openjdk-17-jre-headless \
         && \
     rm -rf /var/lib/apt/lists/* && \
     /generate-jetty-start.sh
@@ -36,6 +51,10 @@ RUN apt-get update && \
         libexpat1-dev \
         libgd-dev \
         zlib1g-dev \
+        libc6 \
+        libgnutls30 \
+        sqlite3 \
+        perl \
         && \
     mkdir -p $GRAPHVIZ_BUILD_DIR && \
     cd $GRAPHVIZ_BUILD_DIR && \
